@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +11,6 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
 
 body {
   background:

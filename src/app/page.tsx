@@ -1,8 +1,9 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+const Board = dynamic(() => import("@/components/Board"), { ssr: false });
+
 export default function Home() {
-  return (
-    <main>
-      <h1>Sticky Note Board</h1>
-      <p>Loading...</p>
-    </main>
-  );
+  return <Board />;
 }

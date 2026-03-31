@@ -1,7 +1,10 @@
 import { Redis } from "@upstash/redis";
 import { Note } from "./types";
 
-const redis = Redis.fromEnv();
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL!,
+  token: process.env.KV_REST_API_TOKEN!,
+});
 
 export async function getAllNotes(): Promise<Note[]> {
   const ids = await redis.smembers("note_ids");

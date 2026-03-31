@@ -19,9 +19,12 @@ export async function POST(request: Request) {
   const note: Note = {
     id: uuid(),
     text,
-    x: x ?? 400,
-    y: y ?? -100,
+    x: x ?? 0,
+    y: y ?? 8,
+    z: body.z ?? 0,
     angle: 0,
+    angleX: 0,
+    angleZ: 0,
     color: color ?? "#fff740",
     createdAt: Date.now(),
   };

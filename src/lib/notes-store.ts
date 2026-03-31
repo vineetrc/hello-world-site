@@ -25,7 +25,7 @@ export async function createNote(note: Note): Promise<void> {
 
 export async function updateNote(
   id: string,
-  updates: Pick<Note, "x" | "y" | "angle">
+  updates: Partial<Pick<Note, "x" | "y" | "z" | "angle" | "angleX" | "angleZ">>
 ): Promise<Note | null> {
   const raw = await redis.get<string>(`notes:${id}`);
   if (!raw) return null;
